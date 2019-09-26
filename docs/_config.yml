@@ -1,6 +1,12 @@
 theme: jekyll-theme-tactile
 name: Dennis Chuah
 
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true
+
 footer-links:
   github: 
   rss: Feed
