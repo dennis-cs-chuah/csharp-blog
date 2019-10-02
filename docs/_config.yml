@@ -1,15 +1,6 @@
-theme: jekyll-theme-tactile
+theme: minima
 name: Dennis Chuah
 
-plugins:
-  - jekyll-relative-links
-relative_links:
-  enabled: true
-  collections: true
-
-footer-links:
-  github: 
-  rss: Feed
 
 permalink: /:title/
 
