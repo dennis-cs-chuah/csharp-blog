@@ -19,7 +19,7 @@ The first thing I noticed was the WPF designer had gone AWOL. The XAML text edit
 
 After spending some time looking for a solution, I stumbled upon a setting:
 
-![settings](https://raw.githubusercontent.com/dennis-cs-chuah/csharp-blog/ab28ced189282bf54bf49741dc4908d0aaa4ab46/docs/images/wpf-dotnet-core-30/Settings.png "Visual Studio Preview Settings")
+![settings](images/wpf-dotnet-core-30/Settings.png "Visual Studio Preview Settings")
 
 Checking the **Use previews of the .NET Core SDK** option and restarting Visual Studio restored the WPF designer. The VS team obviously forgot to unlink the new designer from this setting. Oops!
 
@@ -53,7 +53,7 @@ The generated WPF .Net Core project file was a lot smaller than WPF .Net Framewo
 
 One of the benefits of .Net Core 3.0 is the upgrade to C# 8; Visual Studio now implicitly uses the latest version of C# based on the selected framework. The Advanced Build Settings dialog in Visual Studio now reflects this change:
 
-![advanced build settings](https://raw.githubusercontent.com/dennis-cs-chuah/csharp-blog/master/docs/images/wpf-dotnet-core-30/AdvancedBuildOptions.png "Advanced Build Settings")
+![advanced build settings](images/wpf-dotnet-core-30/AdvancedBuildOptions.png "Advanced Build Settings")
 
 See also: [Changes in C# 8.0](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-8)
 
@@ -89,9 +89,9 @@ public class GameGrid {
 
 I noticed that the constructor was highlighted with green underline and a warning produced:
 
-![Uninitialised](https://raw.githubusercontent.com/dennis-cs-chuah/csharp-blog/master/docs/images/wpf-dotnet-core-30/Uninitialised.png "Uninitialised variable")
+![Uninitialised](images/wpf-dotnet-core-30/Uninitialised.png "Uninitialised variable")
 
-![uninitialised warning](https://raw.githubusercontent.com/dennis-cs-chuah/csharp-blog/master/docs/images/wpf-dotnet-core-30/UninitialisedWarning.png "Uninitialised variable warning")
+![uninitialised warning](images/wpf-dotnet-core-30/UninitialisedWarning.png "Uninitialised variable warning")
 
 adding the line below to the constructor got rid of the warning.
 
@@ -109,9 +109,9 @@ public class GameViewModel : INotifyPropertyChanged {
 
 Rightly, both gameGrid and timer were underlined and two warnings generated:
 
-![nullable](https://raw.githubusercontent.com/dennis-cs-chuah/csharp-blog/master/docs/images/wpf-dotnet-core-30/Nullable.png "Nullable variable")
+![nullable](images/wpf-dotnet-core-30/Nullable.png "Nullable variable")
 
-![nullable warning](https://raw.githubusercontent.com/dennis-cs-chuah/csharp-blog/master/docs/images/wpf-dotnet-core-30/NullableWarning.png "Uninitialised variable warning")
+![nullable warning](images/wpf-dotnet-core-30/NullableWarning.png "Uninitialised variable warning")
 
 As they are meant to be nullable (only initialised when the game starts), so the declaration was changed to allow nulls, `?`:
 
@@ -132,9 +132,9 @@ public void Stop () {
 
 `timer` was underlined and warning generated:
 
-![check for null](https://raw.githubusercontent.com/dennis-cs-chuah/csharp-blog/master/docs/images/wpf-dotnet-core-30/CheckForNull.png "Check variable for null")
+![check for null](images/wpf-dotnet-core-30/CheckForNull.png "Check variable for null")
 
-![check for null warning](https://raw.githubusercontent.com/dennis-cs-chuah/csharp-blog/master/docs/images/wpf-dotnet-core-30/CheckForNullWarning.png "Check variable warning")
+![check for null warning](images/wpf-dotnet-core-30/CheckForNullWarning.png "Check variable warning")
 
 Adding the null check `?.` removed the warning.
 
@@ -315,7 +315,7 @@ public void TestNextState (bool isAlive, int livingNeighbours, bool expectedToBe
 
 ## Step 4 - Run it!
 
-![sample run](https://raw.githubusercontent.com/dennis-cs-chuah/csharp-blog/master/docs/images/wpf-dotnet-core-30/Run.png "Sample run")
+![sample run](images/wpf-dotnet-core-30/Run.png "Sample run")
 
 ## Step 5 - Tweaking The Output
 
