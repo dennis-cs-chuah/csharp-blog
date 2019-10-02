@@ -11,7 +11,7 @@ Before we can check this out, Visual Studio 2019 needed to be upgraded to versio
 
 I created a new WPF (.Net Core) project. This will be a simple implementation of [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life).
 
-![new project](https://raw.githubusercontent.com/dennis-cs-chuah/csharp-blog/ab28ced189282bf54bf49741dc4908d0aaa4ab46/docs/images/wpf-dotnet-core-30/NewProject.png "Create New Project")
+![new project](images/wpf-dotnet-core-30/NewProject.png "Create New Project")
 
 The source for this project is available on GitHub: [dennis-cs-chuah/test-wpf-dotnet-core-30](https://github.com/dennis-cs-chuah/test-wpf-dotnet-core-30)
 
@@ -341,9 +341,18 @@ This is a more useful feature. Turn this option on either by adding `<PublishSin
 
 Adding these options to the project file means only one runtime can be targeted. Using the `dotnet publish` method, different executables could be created for each targeted runtime.
 
-Publishing to win10-x64 created a single EXE file of around 180Kb.
+Publishing to win10-x64 created a single EXE file of around 180Kb. When this is run for t first time, it will unpack its dependent files into a temporary folder - in `AppData\Local\Temp\.net`.
 
 ## Rounding up
 
+For this simple example, it seems like the features of WPF has been successfully migrated over to .Net Core. Whilst WPF still only runs on Windows, there is the added benefit of C# 8, plus Microsoft had said that .Net Framework 4.8 will be the last version. All future development will be in .Net Core. It makes sense that any new projects should target .Net Core.
+
+<div style="border: 1px solid brown; padding: 10px">
+<h4>Update</h4>
+
+<p>I have since found the static nullability checker to be bit aggressive.</p>
+
+
+</div>
 
 
